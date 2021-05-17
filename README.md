@@ -1,2 +1,2 @@
-Ukiyo
-Ichigo İchie
+~ Ukiyo ~  AND 
+~ Ichigo İchie ~
