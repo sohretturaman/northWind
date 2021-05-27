@@ -14,7 +14,10 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
-        <datasource-mapping />
+        <datasource-mapping>
+          <factory-entry name="entityManagerFactory" />
+          <factory-entry name="northwind" />
+        </datasource-mapping>
         <naming-strategy-map />
       </configuration>
     </facet>
@@ -74,6 +77,8 @@
     <orderEntry type="library" name="Maven: jakarta.annotation:jakarta.annotation-api:1.3.5" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.27" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:2.4.5" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.11.4" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.11.4" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.11.4" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.11.4" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.11.4" level="project" />
@@ -119,8 +124,19 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.3.6" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:5.3.6" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.7.0" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.11.4" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.11.4" level="project" />
+    <orderEntry type="library" name="Maven: org.springdoc:springdoc-openapi-ui:1.5.8" level="project" />
+    <orderEntry type="library" name="Maven: org.springdoc:springdoc-openapi-webmvc-core:1.5.8" level="project" />
+    <orderEntry type="library" name="Maven: org.springdoc:springdoc-openapi-common:1.5.8" level="project" />
+    <orderEntry type="library" name="Maven: io.swagger.core.v3:swagger-models:2.1.9" level="project" />
+    <orderEntry type="library" name="Maven: io.swagger.core.v3:swagger-annotations:2.1.9" level="project" />
+    <orderEntry type="library" name="Maven: io.swagger.core.v3:swagger-integration:2.1.9" level="project" />
+    <orderEntry type="library" name="Maven: io.swagger.core.v3:swagger-core:2.1.9" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.11.4" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.validation:jakarta.validation-api:2.0.2" level="project" />
+    <orderEntry type="library" name="Maven: io.github.classgraph:classgraph:4.8.69" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.11" level="project" />
+    <orderEntry type="library" name="Maven: org.webjars:swagger-ui:3.47.1" level="project" />
+    <orderEntry type="library" name="Maven: org.webjars:webjars-locator-core:0.46" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.11.4" level="project" />
   </component>
 </module>

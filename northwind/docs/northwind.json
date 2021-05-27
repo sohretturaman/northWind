@@ -1,0 +1,42 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "",
+    "version" : "1.0.0",
+    "title" : "Api Documentation"
+  },
+  "host" : "localhost",
+  "basePath" : "/",
+  "tags" : [ {
+    "name" : "ProductsController"
+  } ],
+  "schemes" : [ "http", "https" ],
+  "paths" : {
+    "/api/products/getall" : {
+      "get" : {
+        "tags" : [ "ProductsController" ],
+        "operationId" : "getAll",
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "",
+            "schema" : {
+              "type" : "object",
+              "properties" : { }
+            }
+          }
+        },
+        "security" : [ {
+          "api_key" : [ ]
+        } ]
+      }
+    }
+  },
+  "securityDefinitions" : {
+    "api_key" : {
+      "type" : "apiKey",
+      "name" : "Authorization",
+      "in" : "header"
+    }
+  }
+}

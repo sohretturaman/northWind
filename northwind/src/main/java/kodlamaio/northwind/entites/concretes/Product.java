@@ -1,23 +1,27 @@
 package kodlamaio.northwind.entites.concretes;
 
-
 import lombok.Data;
 
 import javax.persistence.*;
 
 
-@Entity                    // hangi katmana ait olduğunu belirt veri tabanı için
-@Table ( name="products") // tablonun ismini söyleyin
+@Entity // hangi katmana ait olduğunu belirt veri tabanı için
 
 @Data
+@Table ( name="products") // tablonun ismini söyleyin
 public class Product {
-	
-	@Id                            // işlmeler id ye göre yapılır bu yüzden burda bu şekilde tanımlanır 
-	@GeneratedValue (strategy = GenerationType.IDENTITY)                // veri tabanındaki veriler bir bir artırılacak
-	@Column ( name ="id")    // tabloda hangi kolona denk geldiğini belirtmek için column kullanılır
+	@Id                            // işlmeler id ye göre yapılır bu yüzden burda bu şekilde tanımlanır
+	@GeneratedValue (strategy = GenerationType.IDENTITY)  //bu değeri vermen gerekir ki akabinde postRequest değeri  çalışabilsin ( localhost)    // veri tabanındaki veriler bir bir artırılacak
+	//@AllArgsConstructor  => bu iki fonksiyonun çalıştırılması gerekmşyor
+	//@NoArgsConstructor
+
+
+
+	@Column ( name ="product_id")
+
     private int id ;
 	
-	@Column ( name =" category_id")
+	@Column ( name =" category_id")  	// tabloda hangi kolona denk geldiğini belirtmek için column kullanılır
       private int categoryId ;
 	
 	@Column ( name =" product_name")
@@ -32,20 +36,9 @@ public class Product {
 	@Column ( name =" quantity_per_unit")
   private String quantityPerUnit ; 
 	
-  public Product () {
-	  
-  }
+
 	
-	  public Product ( int id,int categoryId,String productName, double unitPrice ,
-	  short unitsInStock, String quantitiyPerUnit) {
-		  this.id=id ; 
-		  this.categoryId=categoryId;
-		  this.productName = productName; 
-		  this.unitPrice =unitPrice ;
-	      this.unitsInStock = unitsInStock ; 
-	      this.quantityPerUnit = quantitiyPerUnit;
-	  
-	  }
+
 	
 	
 
