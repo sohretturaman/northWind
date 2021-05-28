@@ -47,6 +47,11 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.5.8</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -57,7 +62,7 @@
                 <configuration>
                     <excludes>
                         <exclude>
-                            <groupId>org.projectlombok</groupId>
+                            <groupId>org.projection</groupId>
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>

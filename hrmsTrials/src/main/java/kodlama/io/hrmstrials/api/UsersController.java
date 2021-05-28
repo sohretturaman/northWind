@@ -1,11 +1,11 @@
 package kodlama.io.hrmstrials.api;
 
 import kodlama.io.hrmstrials.businnes.abstarcts.UserService;
-import kodlama.io.hrmstrials.entities.concretes.Users;
+import kodlama.io.hrmstrials.core.utilities.results.DataResult;
+import kodlama.io.hrmstrials.core.utilities.results.Result;
+import kodlama.io.hrmstrials.entities.concretes.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,9 +21,13 @@ public class UsersController {
     }
 
     @GetMapping( "/getall"  )
-    List<Users> getAll(){
-        return   this.userService.getAll();
+    DataResult< List<User>> getAll(){
+      return this.userService.getAll();
 
+    }
+@PostMapping ( "/add")
+    Result add (@RequestBody User user ){
+         return this.userService.add(user);
     }
 
 
