@@ -31,6 +31,31 @@ public class ProductsController {
 		 return this.productService.add(product);
    }
 
+
+   @GetMapping("/ getByProductName") // ismi aynen yaz
+	public DataResult < Product> getByProductName (@RequestParam String ProductName ){  //yapılan isteğim parametresini oku ona göre veri getir
+		this.productService.getByProductName(ProductName);
+	}
+
+	@GetMapping("/getByProductNameAndCategoryId ")
+	public DataResult<Product> getByProductNameAndCategoryId(@RequestParam String ProductName, @RequestParam int categoryId){
+		return this.productService.getByProductNameAndCategoryId (ProductName,categoryId);
+	}
+
+	@GetMapping("/getByProductNameContains ")
+	 public DataResult<List < product>> getByProductNameContains (@RequestParam String productName){
+		return this.productService.getByProductNameContains(productName );
+	}
+
+	@GetMapping("/getAllByPage ")
+	DataResult <List< Product>> getAll ( int pageNo-1 , int pageSize){ // sıralamya 0 dan başlar
+  return this.productService.getAll(pageNo ,pageSize);
+	}
+
+	@GetMapping("/getAllDesc ")
+	 public DataResult < List <Product> > getAllSorted(){
+		return this.productService.getAllSorted();
+	}
 }
 
 
